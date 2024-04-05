@@ -21,7 +21,7 @@ export default function Interior({ setModelRef }) {
         if (materials['My_UV-texture_UVMAT']) {
             const material = materials['My_UV-texture_UVMAT'];
             material.transparent = true;
-            material.opacity =1;
+            material.opacity = 1;
             material.needsUpdate = true;
             material.emissiveIntensity = 0.5
         }
@@ -31,7 +31,7 @@ export default function Interior({ setModelRef }) {
         setIsVisible(true);
         setTimeout(() => {
             setIsVisible(false);
-        }, 700)
+        }, 500)
     }, [hotspotsStateCurrent])
 
     return (

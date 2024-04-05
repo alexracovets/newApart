@@ -29,19 +29,19 @@ const stateHotspots = createSlice({
                 position: [-6.6, 0.1, -0.1],
                 cameraPosition: [-6.958, 1.32, 0.598],
                 textureRotation: [0.05, 1.12, -0.03],
-                hideIs: [1, 4],
+                hideIs: [1, 3, 4],
                 computers: [
                     {
-                        position: [2.62, 1, 2.83],
-                        rotation: [0, 1.45, 0]
+                        position: [-7.85, 1, -5],
+                        rotation: [0, -Math.PI / 2, 0]
                     },
                     {
-                        position: [2.83, 1, 0.87],
-                        rotation: [0, 1.5, 0]
+                        position: [-7.85, 1, -2.7],
+                        rotation: [0, -Math.PI / 2, 0]
                     },
                     {
-                        position: [0.79, 1, 0.67],
-                        rotation: [0, -1.65, 0]
+                        position: [-5.65, 1, -2.7],
+                        rotation: [0, Math.PI / 2, 0]
                     },
                 ],
                 id: 1

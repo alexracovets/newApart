@@ -8,9 +8,9 @@ export default function MeCamera() {
     const cameraState = useSelector((state) => state.stateCamera);
     const { camera, gl: { domElement } } = useThree();
     const [animPosition, setAnimPosition] = useState({
-        x: 2.206,
+        x: -6.958,
         y: 1.32,
-        z: -2.276
+        z: 0.598
     });
 
     useEffect(() => {
@@ -35,7 +35,7 @@ export default function MeCamera() {
             y: cameraState.position[1],
             z: cameraState.position[2],
             ease: "power2.inOut",
-            duration: 1,
+            duration: .7,
             onUpdate: onUpdate,
             onComplete: onComplete
         });
@@ -47,7 +47,7 @@ export default function MeCamera() {
             minPolarAngle={Math.PI / 2.6}
             maxPolarAngle={Math.PI / 1.65}
             position={[animPosition.x, animPosition.y, animPosition.z]}
-            target={[animPosition.x, animPosition.y, animPosition.z]} 
+            target={[animPosition.x, animPosition.y, animPosition.z]}
             maxDistance={.01}
             rotateSpeed={-0.3}
             enablePan={false}
