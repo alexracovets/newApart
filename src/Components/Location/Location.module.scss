@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'Corsa Grotesk';
+    src: url('./fonts/CorsaGrotesk-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.location_wrapper {
+    position: absolute;
+    left: 0;
+    top: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+
+    .location {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        font-family: 'Corsa Grotesk';
+        font-size: 1.5rem;
+        padding: 0.5rem 1.5rem;
+        border-radius: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        letter-spacing: .1rem;
+    }
+}
