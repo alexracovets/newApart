@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <MeCanvas />
-      <Menu />
+      {/* <Menu /> */}
       <Location />
     </>
   )
