@@ -1,13 +1,12 @@
 import { useEffect, useRef, useState } from 'react';
 import { useGLTF } from '@react-three/drei';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 
-Interior.propTypes = {
-    setModelRef: PropTypes.func,
-}
+import { setModelLoad } from '../../store/reducers/stateLoader';
 
 export default function Interior({ setModelRef }) {
+    const dispatch = useDispatch();
     const modelRef = useRef();
     const { nodes, materials } = useGLTF('/model/apartment/ofice.gltf');
     const hotspotsStateCurrent = useSelector((state) => state.stateHotspots.current);
@@ -23,7 +22,8 @@ export default function Interior({ setModelRef }) {
             material.transparent = true;
             material.opacity = 1;
             material.needsUpdate = true;
-            material.emissiveIntensity = 0.5
+            material.emissiveIntensity = 0.5;
+            dispatch(setModelLoad(true));
         }
     }, [materials]);
 
@@ -43,4 +43,8 @@ export default function Interior({ setModelRef }) {
     )
 }
 
-useGLTF.preload('/model/apartment/ofice.gltf') 
+useGLTF.preload('/model/apartment/ofice.gltf');
+
+Interior.propTypes = {
+    setModelRef: PropTypes.func,
+}
