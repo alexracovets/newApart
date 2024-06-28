@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const stateCamera = createSlice({
     name: 'camera',
     initialState: {
-        position: [-6.958, 1.32, 0],
+        position: [-6.95, 1.319, 0.598],
         orbitMode: false,
         autoRotate: false,
     },

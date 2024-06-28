@@ -40,13 +40,12 @@ export default function MeCamera() {
             onComplete: onComplete
         });
     }, [cameraState.position]);
-
+    
     return (
         <OrbitControls
             args={[camera, domElement]}
             minPolarAngle={Math.PI / 2.6}
             maxPolarAngle={Math.PI / 1.65}
-            position={[animPosition.x, animPosition.y, animPosition.z]}
             target={[animPosition.x, animPosition.y, animPosition.z]}
             maxDistance={.01}
             rotateSpeed={-0.3}

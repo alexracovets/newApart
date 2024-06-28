@@ -9,7 +9,7 @@ function Loader() {
     const isLoadTextures = useSelector((state) => state.stateLoader.isLoadTextures);
 
     useEffect(() => {
-        setIsLoad(isLoadModel && isLoadTextures);
+        setTimeout(() => setIsLoad(isLoadModel && isLoadTextures), 500) 
     }, [isLoadModel, isLoadTextures])
 
     return (
